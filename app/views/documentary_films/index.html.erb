@@ -1,2 +1,19 @@
-<h1>DocumentaryFilms#index</h1>
-<p>Find me in app/views/documentary_films/index.html.erb</p>
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Documentales</h2>
+    <%= link_to 'Nuevo Documental', new_documentary_film_path, class: 'btn btn-primary btn-sm' %>
+  </div>
+
+  <% if @documentary_films.any? %>
+    <div class="list-group">
+      <% @documentary_films.each do |documentary| %>
+        <div class="list-group-item">
+          <h5 class="mb-1"><%= documentary.name %></h5>
+          <small class="text-muted">Director: <%= documentary.director %></small>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <p class="text-muted">No hay documentales registrados.</p>
+  <% end %>
+</div>

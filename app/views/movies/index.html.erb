@@ -1,2 +1,19 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Películas</h2>
+    <%= link_to 'Nueva Película', new_movie_path, class: 'btn btn-primary btn-sm' %>
+  </div>
+
+  <% if @movies.any? %>
+    <div class="list-group">
+      <% @movies.each do |movie| %>
+        <div class="list-group-item">
+          <h5 class="mb-1"><%= movie.name %></h5>
+          <small class="text-muted">Director: <%= movie.director %></small>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <p class="text-muted">No hay películas registradas.</p>
+  <% end %>
+</div>

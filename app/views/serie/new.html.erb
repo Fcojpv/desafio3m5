@@ -1,13 +1,13 @@
 <div class="row justify-content-center">
   <div class="col-md-8">
-    <h1 class="mb-4">Nuevo Documental</h1>
+    <h1 class="mb-4">Nueva Serie</h1>
 
-    <%= form_with(model: @documentary_film, local: true) do |form| %>
-      <% if @documentary_film.errors.any? %>
+    <%= form_with(model: @serie, url: series_create_path, local: true) do |form| %>
+      <% if @serie.errors.any? %>
         <div class="alert alert-danger">
-          <h2><%= pluralize(@documentary_film.errors.count, "error") %> impidieron guardar este documental:</h2>
+          <h2><%= pluralize(@serie.errors.count, "error") %> impidieron guardar esta serie:</h2>
           <ul>
-            <% @documentary_film.errors.full_messages.each do |message| %>
+            <% @serie.errors.full_messages.each do |message| %>
               <li><%= message %></li>
             <% end %>
           </ul>
@@ -30,8 +30,8 @@
       </div>
 
       <div class="mb-3">
-        <%= form.submit "Crear Documental", class: "btn btn-primary" %>
-        <%= link_to "Cancelar", documentary_films_path, class: "btn btn-secondary" %>
+        <%= form.submit "Crear Serie", class: "btn btn-primary" %>
+        <%= link_to "Cancelar", series_path, class: "btn btn-secondary" %>
       </div>
     <% end %>
   </div>

@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand" href="#">Peliculas</a>
+    
+    <button class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNavAltMarkup" 
+            aria-controls="navbarNavAltMarkup" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto">
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Movies
+          </a>
+          <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="<%= movies_path %>">Movies</a></li>
+              <li><a class="dropdown-item" href="<%= new_movie_path %>">New Movie</a></li>
+          </ul>
+        </div>
+        
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Series
+          </a>
+          <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="<%= series_path %>">Series</a></li>
+              <li><a class="dropdown-item" href="<%= new_serie_path %>">New Serie</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Documentary Films
+          </a>
+          <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="<%= documentary_films_path %>">Documentary Films</a></li>
+              <li><a class="dropdown-item" href="<%= new_documentary_film_path %>">New Documentary</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

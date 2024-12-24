@@ -1,2 +1,38 @@
-<h1>Movies#new</h1>
-<p>Find me in app/views/movies/new.html.erb</p>
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    <h1 class="mb-4">Nueva Película</h1>
+
+    <%= form_with(model: @movie, local: true) do |form| %>
+      <% if @movie.errors.any? %>
+        <div class="alert alert-danger">
+          <h2><%= pluralize(@movie.errors.count, "error") %> impidieron guardar esta película:</h2>
+          <ul>
+            <% @movie.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="mb-3">
+        <%= form.label :name, "Nombre", class: "form-label" %>
+        <%= form.text_field :name, class: "form-control" %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :synopsis, "Sinopsis", class: "form-label" %>
+        <%= form.text_area :synopsis, class: "form-control", rows: 4 %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :director, "Director", class: "form-label" %>
+        <%= form.text_field :director, class: "form-control" %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.submit "Crear Película", class: "btn btn-primary" %>
+        <%= link_to "Cancelar", movies_path, class: "btn btn-secondary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
