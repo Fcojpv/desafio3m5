@@ -9,7 +9,8 @@
       <% @documentary_films.each do |documentary| %>
         <div class="list-group-item">
           <h5 class="mb-1"><%= documentary.name %></h5>
-          <small class="text-muted">Director: <%= documentary.director %></small>
+          <small class="text-muted"><strong>Director:</strong> <%= documentary.director %></small>
+          <small class="text-muted">// <strong>Sinopsis:</strong> <%= documentary.synopsis %></small>
         </div>
       <% end %>
     </div>

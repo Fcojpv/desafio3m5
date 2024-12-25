@@ -9,7 +9,8 @@
       <% @movies.each do |movie| %>
         <div class="list-group-item">
           <h5 class="mb-1"><%= movie.name %></h5>
-          <small class="text-muted">Director: <%= movie.director %></small>
+          <small class="text-muted"><strong>Director:</strong> <%= movie.director %></small>
+          <small class="text-muted">// <strong>Sinopsis:</strong> <%= movie.synopsis %></small>
         </div>
       <% end %>
     </div>

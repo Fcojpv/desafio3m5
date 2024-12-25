@@ -9,7 +9,8 @@
       <% @series.each do |serie| %>
         <div class="list-group-item">
           <h5 class="mb-1"><%= serie.name %></h5>
-          <small class="text-muted">Director: <%= serie.director %></small>
+          <small class="text-muted"><strong>Director:</strong> <%= serie.director %></small>
+          <small class="text-muted">// <strong>Sinopsis:</strong> <%= serie.synopsis %></small>
         </div>
       <% end %>
     </div>
