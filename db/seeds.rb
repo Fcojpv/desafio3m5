@@ -4,6 +4,40 @@
 #
 # Example:
 #
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+
+
+10.times do
+  Movie.create!(
+    name: Faker::Movie.title,
+    synopsis: Faker::Movie.quote,
+    director: Faker::Name.name
+  )
+end
+
+puts "10 películas creadas"
+
+
+10.times do
+  Serie.create!(
+    name: Faker::Movie.title,
+    synopsis: Faker::Movie.quote, 
+    director: Faker::Name.name
+  )
+end
+
+puts "10 series creadas"
+
+
+10.times do
+  DocumentaryFilm.create!(
+    name: Faker::Movie.title,
+    synopsis: Faker::Movie.quote,
+    director: Faker::Name.name
+  )
+end
+
+puts "10 documentales creados"
+
+
+
+

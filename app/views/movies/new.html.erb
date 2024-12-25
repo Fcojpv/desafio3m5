@@ -1,6 +1,8 @@
 <div class="row justify-content-center">
   <div class="col-md-8">
-    <h1 class="mb-4">Nueva Película</h1>
+    <div class="bg-dark p-3 rounded mb-4">
+      <h1 class="text-white mb-0">Nueva Película</h1>
+    </div>
 
     <%= form_with(model: @movie, local: true) do |form| %>
       <% if @movie.errors.any? %>
@@ -15,17 +17,17 @@
       <% end %>
 
       <div class="mb-3">
-        <%= form.label :name, "Nombre", class: "form-label" %>
+        <%= form.label :name, "Nombre", class: "form-label text-white" %>
         <%= form.text_field :name, class: "form-control" %>
       </div>
 
       <div class="mb-3">
-        <%= form.label :synopsis, "Sinopsis", class: "form-label" %>
+        <%= form.label :synopsis, "Sinopsis", class: "form-label text-white" %>
         <%= form.text_area :synopsis, class: "form-control", rows: 4 %>
       </div>
 
       <div class="mb-3">
-        <%= form.label :director, "Director", class: "form-label" %>
+        <%= form.label :director, "Director", class: "form-label text-white" %>
         <%= form.text_field :director, class: "form-control" %>
       </div>
 

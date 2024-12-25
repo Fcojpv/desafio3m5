@@ -1,6 +1,8 @@
 <div class="row justify-content-center">
   <div class="col-md-8">
-    <h1 class="mb-4">Nuevo Documental</h1>
+    <div class="bg-dark p-3 rounded mb-4">
+      <h1 class="text-white mb-0">Nuevo Documental</h1>
+    </div>
 
     <%= form_with(model: @documentary_film, local: true) do |form| %>
       <% if @documentary_film.errors.any? %>
@@ -20,17 +22,17 @@
       </div>
 
       <div class="mb-3">
-        <%= form.label :synopsis, "Sinopsis", class: "form-label" %>
+        <%= form.label :synopsis, "Sinopsis", class: "form-label text-white" %>
         <%= form.text_area :synopsis, class: "form-control", rows: 4 %>
       </div>
 
       <div class="mb-3">
-        <%= form.label :director, "Director", class: "form-label" %>
+        <%= form.label :director, "Director", class: "form-label text-white" %>
         <%= form.text_field :director, class: "form-control" %>
       </div>
 
       <div class="mb-3">
-        <%= form.submit "Crear Documental", class: "btn btn-primary" %>
+        <%= form.submit "Crear Documental", class: "btn btn-primary text-white" %>
         <%= link_to "Cancelar", documentary_films_path, class: "btn btn-secondary" %>
       </div>
     <% end %>
